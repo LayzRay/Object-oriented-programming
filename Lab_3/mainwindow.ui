@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>814</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="Search_edit"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Find">
+        <property name="text">
+         <string>Найти</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="Text_browser"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>ID:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="ID_Edit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>ФИО:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="Name_Edit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Год рождения</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="Year_Edit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Пол</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="Sex_Edit">
+        <item>
+         <property name="text">
+          <string>Муж</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Жен</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Add_Push">
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>814</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Find</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Find_employee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>746</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>625</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Add_Push</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Add_employee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>770</x>
+     <y>566</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>548</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Add_Push</sender>
+   <signal>clicked()</signal>
+   <receiver>ID_Edit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>741</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>184</x>
+     <y>564</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Add_Push</sender>
+   <signal>clicked()</signal>
+   <receiver>Name_Edit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>744</x>
+     <y>574</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>569</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Add_Push</sender>
+   <signal>clicked()</signal>
+   <receiver>Year_Edit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>791</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>622</x>
+     <y>571</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Find</sender>
+   <signal>clicked()</signal>
+   <receiver>Search_edit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>787</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>680</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Find_employee()</slot>
+  <slot>Add_employee()</slot>
+ </slots>
+</ui>
